@@ -1,4 +1,4 @@
-#  OctoPrint
+#  stellaRasPrint
 
 
 ![GitHub release](https://img.shields.io/github/release/foosel/OctoPrint.svg?colorB=brightgreen)
