@@ -30,7 +30,7 @@ $(function() {
 //                return self.name() + " [" + gettext("OctoPrint") + "]";
 //            else
 //                return gettext("OctoPrint");
-
+            return ""
         });
     }
 
