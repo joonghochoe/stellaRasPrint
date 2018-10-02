@@ -5,20 +5,12 @@ and released under the [GNU Affero General Public License V3](http://www.gnu.org
 
 Its website can be found at [octoprint.org](https://octoprint.org/?utm_source=github&utm_medium=readme).
 
-The community forum is available at [discourse.octoprint.org](https://discourse.octoprint.org/?utm_source=github&utm_medium=readme).
-
-The official IRC channel is [#octoprint on freenode](https://chat.octoprint.org). Its logs can be found [here](https://freenode.logbot.info/octoprint).
-
-The FAQ can be accessed by following [faq.octoprint.org](https://faq.octoprint.org/?utm_source=github&utm_medium=readme).
-
 The documentation is located at [docs.octoprint.org](http://docs.octoprint.org).
 
 The official plugin repository can be reached at [plugins.octoprint.org](https://plugins.octoprint.org/?utm_source=github&utm_medium=readme).
 
 **OctoPrint's development wouldn't be possible without the [financial support by its community](https://octoprint.org/support-octoprint/?utm_source=github&utm_medium=readme).
 If you enjoy OctoPrint, please consider becoming a regular supporter!**
-
-![Screenshot](http://i.imgur.com/dF3noFp.png)
 
 You are currently looking at the source code repository of OctoPrint. If you already installed it
 (e.g. by using the Raspberry Pi targeted distribution [OctoPi](https://github.com/guysoft/OctoPi)) and only
