@@ -92,8 +92,8 @@ default_settings = {
 		"log": False,
 		"timeout": {
 			"detection": 1,
-			"connection": 10,
-			"communication": 30,
+			"connection": 120,
+			"communication": 120,
 			"communicationBusy": 3,
 			"temperature": 5,
 			"temperatureTargetSet": 2,
