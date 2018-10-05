@@ -31,6 +31,7 @@ import octoprint.plugin
 
 from octoprint.util import DefaultOrderedDict
 from octoprint.util.json import JsonEncoding
+from octoprint.util.net import is_lan_address
 
 from werkzeug.contrib.cache import BaseCache
 
@@ -514,13 +515,22 @@ def passive_login():
 	else:
 		user = flask_login.current_user
 
+	remoteAddr = get_remote_address(flask.request)
+	ipCheckEnabled = settings().getBoolean(["server", "ipCheck", "enabled"])
+	ipCheckTrusted = settings().get(["server", "ipCheck", "trustedSubnets"])
+
 	if user is not None and not user.is_anonymous() and user.is_active():
 		flask_principal.identity_changed.send(flask.current_app._get_current_object(),
 		                                      identity=flask_principal.Identity(user.get_id()))
 		if hasattr(user, "session"):
 			flask.session["usersession.id"] = user.session
 		flask.g.user = user
-		return flask.jsonify(user.asDict())
+
+		response = user.asDict()
+		response["_is_external_client"] = ipCheckEnabled and not is_lan_address(remoteAddr,
+		                                                                        additional_private=ipCheckTrusted)
+		return flask.jsonify(response)
+
 	elif settings().getBoolean(["accessControl", "autologinLocal"]) \
 			and settings().get(["accessControl", "autologinAs"]) is not None \
 			and settings().get(["accessControl", "localNetworks"]) is not None:
@@ -531,7 +541,6 @@ def passive_login():
 			localNetworks.add(ip)
 
 		try:
-			remoteAddr = get_remote_address(flask.request)
 			if netaddr.IPAddress(remoteAddr) in localNetworks:
 				user = octoprint.server.userManager.findUser(autologinAs)
 				if user is not None and user.is_active():
@@ -541,7 +550,11 @@ def passive_login():
 					flask_login.login_user(user)
 					flask_principal.identity_changed.send(flask.current_app._get_current_object(),
 					                                      identity=flask_principal.Identity(user.get_id()))
-					return flask.jsonify(user.asDict())
+
+					response = user.asDict()
+					response["_is_external_client"] = ipCheckEnabled and not is_lan_address(remoteAddr,
+					                                                                        additional_private=ipCheckTrusted)
+					return flask.jsonify(response)
 		except:
 			logger = logging.getLogger(__name__)
 			logger.exception("Could not autologin user %s for networks %r" % (autologinAs, localNetworks))
@@ -1056,7 +1069,7 @@ def admin_validator(request):
 	:param request: The Flask request object
 	"""
 
-	user = _get_flask_user_from_request(request)
+	user = get_flask_user_from_request(request)
 	if user is None or not user.is_authenticated() or not user.is_admin():
 		raise tornado.web.HTTPError(403)
 
@@ -1071,12 +1084,12 @@ def user_validator(request):
 	:param request: The Flask request object
 	"""
 
-	user = _get_flask_user_from_request(request)
+	user = get_flask_user_from_request(request)
 	if user is None or not user.is_authenticated():
 		raise tornado.web.HTTPError(403)
 
 
-def _get_flask_user_from_request(request):
+def get_flask_user_from_request(request):
 	"""
 	Retrieves the current flask user from the request context. Uses API key if available, otherwise the current
 	user session if available.
