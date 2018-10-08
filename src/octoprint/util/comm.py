@@ -52,7 +52,8 @@ regex_float_pattern = "[-+]?[0-9]*\.?[0-9]+"
 regex_positive_float_pattern = "[+]?[0-9]*\.?[0-9]+"
 regex_int_pattern = "\d+"
 
-regex_command = re.compile("^\s*((?P<codeGM>[GM]\d+)(\\.(?P<subcode>\d+))?|(?P<codeT>T)\d+|(?P<codeF>F)\d+)")
+# STELLAMOVE
+regex_command = re.compile("^\s*((?P<codeGM>[GM]\d+)(\\.(?P<subcode>\d+))?|(?P<codeT>T)\d+|(?P<codeF>F)\d+|(?P<codeG4R>[ilghtc])[0-9a-fA-F])")
 """Regex for a GCODE command."""
 
 regex_float = re.compile(regex_float_pattern)
@@ -2009,9 +2010,10 @@ class MachineCom(object):
 							# if it was a wait we probably missed an ok, so let's simulate that now
 							self._handle_ok()
 						self._onConnected()
-					elif time.time() > self._timeout:
-						self._log("There was a timeout while trying to connect to the printer")
-						self.close(wait=False)
+					# STELLAMOVE
+					# elif time.time() > self._timeout:
+					# 	self._log("There was a timeout while trying to connect to the printer")
+					# 	self.close(wait=False)
 
 				### Operational (idle or busy)
 				elif self._state in (self.STATE_OPERATIONAL,
@@ -4464,6 +4466,9 @@ def gcode_and_subcode_for_cmd(cmd):
 		gcode = values["codeT"]
 	elif settings().getBoolean(["serial", "supportFAsCommand"]) and "codeF" in values and values["codeF"]:
 		gcode = values["codeF"]
+	# STELLAMOVE
+	elif "codeG4R" in values and values["codeG4R"]:
+		gcode = values["codeG4R"]
 	else:
 		# this should never happen
 		return None, None
