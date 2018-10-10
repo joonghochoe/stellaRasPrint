@@ -92,7 +92,7 @@ default_settings = {
 		"log": False,
 		"timeout": {
 			"detection": 1,
-           # STELLAMOVE
+            # STELLAMOVE
 			"connection": 120,
 			"communication": 120,
 			"communicationBusy": 3,
@@ -114,7 +114,7 @@ default_settings = {
 		"additionalPorts": [],
 		"additionalBaudrates": [],
 		"longRunningCommands": ["G4", "G28", "G29", "G30", "G32", "M400", "M226", "M600"],
-		"checksumRequiringCommands": ["M110"],
+		"checksumRequiringCommands": ["M110", "c", "g", "h", "i", "l", "q", "t"],
 		"helloCommand": "M110 N0",
 		"disconnectOnErrors": True,
 		"ignoreErrorsFromFirmware": False,

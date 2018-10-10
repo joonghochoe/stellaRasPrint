@@ -53,7 +53,7 @@ regex_positive_float_pattern = "[+]?[0-9]*\.?[0-9]+"
 regex_int_pattern = "\d+"
 
 # STELLAMOVE
-regex_command = re.compile("^\s*((?P<codeGM>[GM]\d+)(\\.(?P<subcode>\d+))?|(?P<codeT>T)\d+|(?P<codeF>F)\d+|(?P<codeG4R>[ilghtc])[0-9a-fA-F])")
+regex_command = re.compile("^\s*((?P<codeGM>[GM]\d+)(\\.(?P<subcode>\d+))?|(?P<codeT>T)\d+|(?P<codeF>F)\d+|(?P<codeG4R>[cghilqt])[0-9a-fA-F])")
 """Regex for a GCODE command."""
 
 regex_float = re.compile(regex_float_pattern)
