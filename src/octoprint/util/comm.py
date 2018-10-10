@@ -1025,7 +1025,8 @@ class MachineCom(object):
 					self.resetLineNumbers(part_of_job=True, tags={"trigger:comm.start_print"})
 
 				self._callback.on_comm_print_job_started()
-
+				# STELLAMOVE
+				self._do_send_without_checksum("M824", log=True)
 				if self.isSdFileSelected():
 					if not external_sd:
 						# make sure to ignore the "file selected" later on, otherwise we'll reset our progress data
@@ -2256,7 +2257,9 @@ class MachineCom(object):
 		"""
 
 		if self.isOperational() and not self._temperature_autoreporting and not self._connection_closing and not self.isStreaming() and not self._long_running_command and not self._heating and not self._dwelling_until and not self._manualStreaming:
-			self.sendCommand("M105", cmd_type="temperature_poll", tags={"trigger:comm.poll_temperature"})
+			# STELLAMOVE
+			# self.sendCommand("M105", cmd_type="temperature_poll", tags={"trigger:comm.poll_temperature"})
+			self._do_send_without_checksum("M105", log=True)
 
 	def _poll_sd_status(self):
 		"""
