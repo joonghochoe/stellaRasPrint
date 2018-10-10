@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: StellaRasPrint\n"
 "Report-Msgid-Bugs-To: i18n@octoprint.org\n"
 "POT-Creation-Date: 2018-07-25 13:37+0200\n"
-"PO-Revision-Date: 2018-10-09 23:52+0900\n"
+"PO-Revision-Date: 2018-10-10 11:33+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Last-Translator: Joongho Choe <joongho.choe@gmail.com>\n"
 "Language-Team: joongho.choe@gmail.com\n"
 "Language: ko\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #: src/octoprint/plugins/action_command_prompt/__init__.py:93
 msgid "Action Command Prompt"
@@ -92,7 +92,7 @@ msgstr "읽음으로 표시"
 
 #: src/octoprint/plugins/announcements/static/js/announcements.js:287
 msgid "Read..."
-msgstr ""
+msgstr "읽기..."
 
 #: src/octoprint/plugins/announcements/templates/announcements.jinja2:31
 msgid "Mark as last read"
@@ -110,7 +110,7 @@ msgstr "닫기"
 
 #: src/octoprint/plugins/announcements/templates/announcements_settings.jinja2:1
 msgid "Configured Channels"
-msgstr ""
+msgstr "구성된 채널"
 
 #: src/octoprint/plugins/announcements/templates/announcements_settings.jinja2:6
 #: src/octoprint/plugins/cura/templates/snippets/settings/cura/profileImporter.jinja2:27
@@ -181,6 +181,9 @@ msgid ""
 "is accessible from the internet, your printer <strong>will be accessible by "
 "everyone - that also includes the bad guys!</strong>"
 msgstr ""
+"당신은 접속 제어를 사용하지 않도록 <strong>설정하고</strong> OctoPrint 설치가 인"
+"터넷에서 액세스할 수 있는 경우, 장비는 <strong>모든 사람에 의해 액세스할 수 있습"
+"니다!</strong>"
 
 #: src/octoprint/plugins/corewizard/static/js/corewizard.js:83
 msgid "Please set up Access Control"
@@ -261,7 +264,7 @@ msgstr "암호"
 
 #: src/octoprint/plugins/corewizard/templates/corewizard_acl_wizard.jinja2:31
 msgid "Confirm Password"
-msgstr "암호확인"
+msgstr "암호 확인"
 
 #: src/octoprint/plugins/corewizard/templates/corewizard_acl_wizard.jinja2:34
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:60
@@ -320,6 +323,11 @@ msgid ""
 "    If that should not actually be the case, server startups, update checks and "
 "the like might take longer.\n"
 msgstr ""
+"\n"
+"    사용 하지 않도록 설정 된 경우 OctoPrint는 항상 인터넷에 대한 작업 연결을 갖"
+"고 있다고 가정합니다.\n"
+"    만약 실제로 그런 경우가 아니라면, 서버 시작, 업데이트 확인 등이 더 오래 걸"
+"릴 수 있습니다.\n"
 
 #: src/octoprint/plugins/corewizard/templates/corewizard_onlinecheck_wizard.jinja2:10
 msgid ""
@@ -640,7 +648,7 @@ msgstr ""
 #: src/octoprint/templates/snippets/settings/webcam/webcamSnapshotUrl.jinja2:6
 #: src/octoprint/templates/snippets/settings/webcam/webcamStreamUrl.jinja2:6
 msgid "Test"
-msgstr ""
+msgstr "검사"
 
 #: src/octoprint/plugins/cura/templates/snippets/settings/cura/profileImporter.jinja2:4
 msgid "Import Existing Cura Profile"
@@ -1020,7 +1028,7 @@ msgstr "완료!"
 
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:891
 msgid "Blacklisted"
-msgstr ""
+msgstr "블랙리스트"
 
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:893
 msgid "Disabled due to active safe mode"
@@ -1077,7 +1085,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:956
 msgid "Read more..."
-msgstr ""
+msgstr "더 읽기..."
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:3
 msgid ""
@@ -1117,7 +1125,7 @@ msgstr ""
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:20
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:77
 msgid "Plugin Configuration"
-msgstr ""
+msgstr "플러그인 구성"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:38
 msgid "Installed Plugins"
@@ -1125,7 +1133,7 @@ msgstr "설치된 플러그인"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Bundled with OctoPrint"
-msgstr ""
+msgstr "기본 탑재"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Cannot be uninstalled through OctoPrint"
@@ -1137,11 +1145,11 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Pending install"
-msgstr ""
+msgstr "설치 대기"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Pending uninstall"
-msgstr ""
+msgstr "삭제 대기"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Disabled due to safe mode"
@@ -1158,7 +1166,7 @@ msgstr ""
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:54
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:166
 msgid "Homepage"
-msgstr ""
+msgstr "홈페이지"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:61
 msgid "Uninstall Plugin"
@@ -1191,15 +1199,15 @@ msgstr "이름별 정렬"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:143
 msgid "Sort by publication date"
-msgstr ""
+msgstr "게시 날짜별 정렬"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:145
 msgid "Only show uninstalled plugins"
-msgstr ""
+msgstr "삭제된 플러그인만 보기"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:146
 msgid "Only show compatible plugins"
-msgstr ""
+msgstr "호환 플러그인만 보기"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:148
 msgid "Refresh list from repository"
@@ -1287,7 +1295,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:252
 msgid "Repository URL"
-msgstr ""
+msgstr "저장소 URL"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:257
 msgid ""
@@ -1456,7 +1464,7 @@ msgstr ""
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:372
 #: src/octoprint/templates/dialogs/settings/serialconnection.jinja2:373
 msgid "Ignore"
-msgstr ""
+msgstr "무시"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:350
 msgid ""
@@ -1478,7 +1486,7 @@ msgstr "인터넷 연결되지 않음"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:420
 msgid "Update not possible"
-msgstr ""
+msgstr "업데이트 불가능"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:431
 msgid "Unknown update check, configuration ok?"
@@ -1512,7 +1520,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:553
 msgid "Can't update while printing"
-msgstr ""
+msgstr "출력 동안 업데이트 할 수 없습니다"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:554
 msgid ""
@@ -1619,7 +1627,7 @@ msgstr "업데이트가 성공적으로 완료되었습니다."
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:829
 msgid "Update failed!"
-msgstr ""
+msgstr "업데이트 실패!"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:830
 msgid ""
@@ -1660,7 +1668,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:23
 msgid "Current versions"
-msgstr ""
+msgstr "현재 버전"
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:29
 msgid "Update available"
@@ -1668,7 +1676,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:32
 msgid "Update"
-msgstr ""
+msgstr "업데이트"
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:35
 msgid "Installed:"
@@ -1684,7 +1692,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:62
 msgid "Update all"
-msgstr ""
+msgstr "모두 업데이트"
 
 #: src/octoprint/plugins/softwareupdate/templates/softwareupdate_settings.jinja2:63
 msgid "Check for update now"
@@ -1839,7 +1847,7 @@ msgstr "기능"
 
 #: src/octoprint/server/views.py:574
 msgid "GCODE Visualizer"
-msgstr ""
+msgstr "G 코드 뷰어"
 
 #: src/octoprint/server/views.py:575
 msgid "API"
@@ -1956,7 +1964,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/dataupdater.js:159
 msgid "Safe mode is active"
-msgstr ""
+msgstr "안전 모드 활성화"
 
 #: src/octoprint/static/js/app/dataupdater.js:160
 msgid ""
@@ -1974,7 +1982,7 @@ msgstr ""
 #: src/octoprint/static/js/app/dataupdater.js:236
 #: src/octoprint/static/js/app/dataupdater.js:247
 msgid "Error reported by printer"
-msgstr ""
+msgstr "장비로부터 보고된 오류"
 
 #: src/octoprint/static/js/app/dataupdater.js:237
 #, python-format
@@ -2003,7 +2011,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/dataupdater.js:258
 msgid "Error connecting to printer"
-msgstr ""
+msgstr "장비 연결 오류"
 
 #: src/octoprint/static/js/app/dataupdater.js:259
 #, python-format
@@ -2013,7 +2021,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/dataupdater.js:263
 msgid "Error starting a print"
-msgstr ""
+msgstr "출력 시작 오류"
 
 #: src/octoprint/static/js/app/dataupdater.js:264
 #, python-format
@@ -2049,7 +2057,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/dataupdater.js:305
 msgid "Printer reset detected"
-msgstr ""
+msgstr "장비 리셋 감지"
 
 #: src/octoprint/static/js/app/helpers.js:419
 #, python-format
@@ -2140,7 +2148,7 @@ msgstr ""
 #: src/octoprint/static/js/app/helpers.js:700
 #: src/octoprint/static/js/app/viewmodels/connection.js:135
 msgid "Are you sure?"
-msgstr ""
+msgstr "확실합니까?"
 
 #: src/octoprint/static/js/app/helpers.js:903
 msgid "Progress"
@@ -2219,7 +2227,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/viewmodels/connection.js:143
 msgid "Stay Connected"
-msgstr ""
+msgstr "연결 유지"
 
 #: src/octoprint/static/js/app/viewmodels/control.js:72
 #: src/octoprint/static/js/app/viewmodels/files.js:623
@@ -2372,19 +2380,19 @@ msgstr "저장중 ..."
 
 #: src/octoprint/static/js/app/viewmodels/files.js:1103
 msgid "Uploading ..."
-msgstr ""
+msgstr "업로딩중..."
 
 #: src/octoprint/static/js/app/viewmodels/gcode.js:14
 msgid "Loading..."
-msgstr ""
+msgstr "로딩중..."
 
 #: src/octoprint/static/js/app/viewmodels/gcode.js:18
 msgid "Analyzing..."
-msgstr ""
+msgstr "분석중..."
 
 #: src/octoprint/static/js/app/viewmodels/gcode.js:22
 msgid "Analyzed"
-msgstr ""
+msgstr "분석완료"
 
 #: src/octoprint/static/js/app/viewmodels/gcode.js:531
 msgid "Estimated total print time"
@@ -2428,7 +2436,7 @@ msgstr ""
 #: src/octoprint/templates/navbar/login.jinja2:2
 #: src/octoprint/templates/navbar/login.jinja2:15
 msgid "Login"
-msgstr ""
+msgstr "로그인"
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:33
 #, python-format
@@ -2437,7 +2445,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:105
 msgid "Login successful"
-msgstr ""
+msgstr "로그인 성공"
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:105
 #, python-format
@@ -2447,7 +2455,7 @@ msgstr ""
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:120
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:128
 msgid "Login failed"
-msgstr ""
+msgstr "로그인 실패"
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:121
 msgid "User unknown or wrong password"
@@ -2459,7 +2467,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:141
 msgid "Logout successful"
-msgstr ""
+msgstr "로그아웃 성공"
 
 #: src/octoprint/static/js/app/viewmodels/loginstate.js:141
 msgid "You are now logged out"
@@ -2481,43 +2489,43 @@ msgstr "이러한 식별자가 있는 프로파이이 이미 있습니다"
 #: src/octoprint/static/js/app/viewmodels/settings.js:63
 #: src/octoprint/static/js/app/viewmodels/settings.js:93
 msgid "default"
-msgstr ""
+msgstr "기본"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:156
 #: src/octoprint/static/js/app/viewmodels/settings.js:64
 #: src/octoprint/static/js/app/viewmodels/settings.js:77
 msgid "red"
-msgstr ""
+msgstr "적색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:157
 #: src/octoprint/static/js/app/viewmodels/settings.js:65
 #: src/octoprint/static/js/app/viewmodels/settings.js:79
 msgid "orange"
-msgstr ""
+msgstr "오렌지색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:158
 #: src/octoprint/static/js/app/viewmodels/settings.js:66
 #: src/octoprint/static/js/app/viewmodels/settings.js:81
 msgid "yellow"
-msgstr ""
+msgstr "황색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:159
 #: src/octoprint/static/js/app/viewmodels/settings.js:67
 #: src/octoprint/static/js/app/viewmodels/settings.js:83
 msgid "green"
-msgstr ""
+msgstr "녹색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:160
 #: src/octoprint/static/js/app/viewmodels/settings.js:68
 #: src/octoprint/static/js/app/viewmodels/settings.js:85
 msgid "blue"
-msgstr ""
+msgstr "청색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:161
 #: src/octoprint/static/js/app/viewmodels/settings.js:70
 #: src/octoprint/static/js/app/viewmodels/settings.js:89
 msgid "black"
-msgstr ""
+msgstr "흑색"
 
 #: src/octoprint/static/js/app/viewmodels/printerprofiles.js:168
 msgid "Lower Left"
@@ -3161,7 +3169,7 @@ msgstr ""
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:66
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:95
 msgid "Active"
-msgstr ""
+msgstr "활성화"
 
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:6
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:73
@@ -3173,11 +3181,11 @@ msgstr "관리자"
 #: src/octoprint/templates/dialogs/settings/api.jinja2:17
 #: src/octoprint/templates/dialogs/usersettings/access.jinja2:22
 msgid "API Key"
-msgstr ""
+msgstr "API 키"
 
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:12
 msgid "Copy API Key to clipboard"
-msgstr ""
+msgstr "API 키 복사"
 
 #: src/octoprint/templates/dialogs/settings/accesscontrol.jinja2:16
 msgid "Update User"
@@ -3461,7 +3469,7 @@ msgstr "경고"
 
 #: src/octoprint/templates/dialogs/settings/folders.jinja2:73
 msgid "Critical"
-msgstr ""
+msgstr "심각"
 
 #: src/octoprint/templates/dialogs/settings/folders.jinja2:79
 #: src/octoprint/templates/dialogs/settings/gcodevisualizer.jinja2:25
@@ -3626,7 +3634,7 @@ msgstr ""
 
 #: src/octoprint/templates/dialogs/settings/serialconnection.jinja2:61
 msgid "Query intervals"
-msgstr ""
+msgstr "쿼리 간격"
 
 #: src/octoprint/templates/dialogs/settings/serialconnection.jinja2:62
 msgid "Interval in which to poll for the temperature information from the printer"
@@ -3823,7 +3831,7 @@ msgstr ""
 
 #: src/octoprint/templates/dialogs/settings/serialconnection.jinja2:212
 msgid "RepRap Firmware"
-msgstr ""
+msgstr "렙랩 펌웨어"
 
 #: src/octoprint/templates/dialogs/settings/serialconnection.jinja2:219
 msgid "Always assume SD card is present"
@@ -4052,11 +4060,11 @@ msgstr ""
 
 #: src/octoprint/templates/dialogs/settings/server.jinja2:2
 msgid "Commands"
-msgstr ""
+msgstr "명령어"
 
 #: src/octoprint/templates/dialogs/settings/server.jinja2:8
 msgid "Connectivity check"
-msgstr ""
+msgstr "연결 확인"
 
 #: src/octoprint/templates/dialogs/settings/server.jinja2:13
 msgid "Plugin blacklist processing"
@@ -4064,7 +4072,7 @@ msgstr ""
 
 #: src/octoprint/templates/dialogs/settings/temperatures.jinja2:2
 msgid "Graph"
-msgstr ""
+msgstr "그래프"
 
 #: src/octoprint/templates/dialogs/settings/temperatures.jinja2:4
 msgid "Graph cutoff"
@@ -4104,11 +4112,11 @@ msgstr ""
 
 #: src/octoprint/templates/dialogs/settings/temperatures.jinja2:32
 msgid "Presets"
-msgstr ""
+msgstr "프리셋"
 
 #: src/octoprint/templates/dialogs/settings/temperatures.jinja2:34
 msgid "Extruder"
-msgstr ""
+msgstr "압출기"
 
 #: src/octoprint/templates/dialogs/settings/terminalfilters.jinja2:4
 msgid "RegExp"
@@ -4378,7 +4386,7 @@ msgstr ""
 
 #: src/octoprint/templates/sidebar/files_header.jinja2:26
 msgid "Hide successfully printed files"
-msgstr ""
+msgstr "출력 성공 파일 감추기"
 
 #: src/octoprint/templates/sidebar/files_header.jinja2:31
 msgid "Refresh file list"
@@ -4402,7 +4410,7 @@ msgstr ""
 
 #: src/octoprint/templates/sidebar/state.jinja2:1
 msgid "Current printer state"
-msgstr ""
+msgstr "현재 장비 상태"
 
 #: src/octoprint/templates/sidebar/state.jinja2:3
 msgid "Name of file currently selected for printing"
@@ -4626,7 +4634,7 @@ msgstr ""
 #: src/octoprint/templates/snippets/settings/printerprofiles/profileEditorGeneral.jinja2:17
 #: src/octoprint/templates/snippets/settings/printerprofiles/profiles.jinja2:5
 msgid "Model"
-msgstr ""
+msgstr "모델"
 
 #: src/octoprint/templates/snippets/settings/printerprofiles/profiles.jinja2:14
 msgid "Set as default profile"
@@ -4646,7 +4654,7 @@ msgstr "OctoPrint가 실행 중인 시스템을 다시 시작하는 명령"
 
 #: src/octoprint/templates/snippets/settings/server/serverCommandSystemRestart.jinja2:2
 msgid "Restart system"
-msgstr ""
+msgstr "시스템 재시작"
 
 #: src/octoprint/templates/snippets/settings/server/serverCommandSystemShutdown.jinja2:1
 msgid "Command to shut down the system OctoPrint is running on"
@@ -4685,7 +4693,7 @@ msgstr "인터넷 연결을 확인할 호스트"
 
 #: src/octoprint/templates/snippets/settings/server/serverOnlineCheckHost.jinja2:2
 msgid "Host IP"
-msgstr ""
+msgstr "호스트 IP"
 
 #: src/octoprint/templates/snippets/settings/server/serverOnlineCheckInterval.jinja2:1
 msgid "Interval in which to check for internet connectivity"
@@ -4693,7 +4701,7 @@ msgstr "인터넷 연결을 확인할 간격"
 
 #: src/octoprint/templates/snippets/settings/server/serverOnlineCheckInterval.jinja2:2
 msgid "Check interval"
-msgstr ""
+msgstr "간격 확인"
 
 #: src/octoprint/templates/snippets/settings/server/serverOnlineCheckPort.jinja2:1
 msgid "Port against which to check for internet connectivity"
@@ -4705,7 +4713,7 @@ msgstr "포트"
 
 #: src/octoprint/templates/snippets/settings/server/serverOnlineCheckTest.jinja2:3
 msgid "Test host & port"
-msgstr ""
+msgstr "호스트 & 포트 검사"
 
 #: src/octoprint/templates/snippets/settings/server/serverPluginBlacklistDescription.jinja2:1
 msgid ""
@@ -4742,7 +4750,7 @@ msgstr "플러그인 블랙리스트 URL. 일반적으로 이를 변경할 필�
 
 #: src/octoprint/templates/snippets/settings/server/serverPluginBlacklistUrl.jinja2:2
 msgid "Blacklist URL"
-msgstr ""
+msgstr "블랙리스트 URL"
 
 #: src/octoprint/templates/snippets/settings/webcam/ffmpegBitrate.jinja2:1
 msgid "Bitrate to use for encoding the timelapse video"
@@ -5169,7 +5177,7 @@ msgstr ""
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:22
 msgid "Minimum interval"
-msgstr ""
+msgstr "최소 간격"
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:28
 msgid ""
@@ -5212,7 +5220,7 @@ msgstr ""
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:77
 msgid "Save as default"
-msgstr ""
+msgstr "기본으로 저장"
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:78
 msgid ""
@@ -5226,7 +5234,7 @@ msgstr ""
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:86
 msgid "Save changes"
-msgstr ""
+msgstr "변경사항 저장"
 
 #: src/octoprint/templates/tabs/timelapse.jinja2:87
 msgid "Reset to active configuration"
