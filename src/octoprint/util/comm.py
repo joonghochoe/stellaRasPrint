@@ -1205,7 +1205,7 @@ class MachineCom(object):
 
 		with self._jobLock:
 			self._changeState(self.STATE_CANCELLING)
-
+			self.sendCommand("M826")
 			if self._abort_heatup_on_cancel:
 				# abort any ongoing heatups immediately to get back control over the printer
 				self.sendCommand("M108",
@@ -1274,6 +1274,7 @@ class MachineCom(object):
 					self._pauseWaitStartTime = None
 
 				self._changeState(self.STATE_RESUMING)
+				self.sendCommand("M827")
 				self._callback.on_comm_print_job_resumed(suppress_script=not local_handling)
 				self.sendCommand(SendQueueMarker(lambda: self._changeState(self.STATE_PRINTING)), part_of_job=True)
 
@@ -1294,6 +1295,7 @@ class MachineCom(object):
 					self._pauseWaitStartTime = time.time()
 
 				self._changeState(self.STATE_PAUSING)
+				self.sendCommand("M827")
 				if self.isSdFileSelected() and local_handling:
 					self.sendCommand("M25",
 					                 part_of_job=True,
