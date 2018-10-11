@@ -44,15 +44,15 @@
     <div id="control-jog-xy" class="jog-panel">
         <h1>X/Y</h1>
         <div>
-            <button id="control-yinc" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',1) }"><i class="fa fa-arrow-up"></i></button>
-        </div>
-        <div>
-            <button id="control-xdec" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',-1) }"><i class="fa fa-arrow-left"></i></button>
+            <button id="control-yinc" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',1) }"><i class="fa fa-arrow-up"></i></button>
             <button id="control-xyhome" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendHomeCommand(['x', 'y']) }"><i class="fa fa-home"></i></button>
-            <button id="control-xinc" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',1) }"><i class="fa fa-arrow-right"></i></button>
+            <button id="control-xdec" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',-1) }"><i class="fa fa-arrow-left"></i></button>
+        </div>
+        <div style="height:80px">
         </div>
         <div>
-            <button id="control-ydec" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',-1) }"><i class="fa fa-arrow-down"></i></button>
+            <button id="control-ydec" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',-1) }"><i class="fa fa-arrow-down"></i></button>
+            <button id="control-xinc" class="btn box pull-right" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',1) }"><i class="fa fa-arrow-right"></i></button>
         </div>
     </div>
     <!-- Z jogging control panel -->
@@ -69,13 +69,7 @@
         </div>
     </div>
 
-    <!-- Jog distance -->
-    <div class="distance">
-        <div class="btn-group" data-toggle="buttons-radio" id="jog_distance">
-            <!-- ko foreach: distances -->
-            <button type="button" class="btn distance" data-bind="enable: $root.isOperational() && !$root.isPrinting() && $root.loginState.isUser(), text: $data, click: function() { $root.distance($data) }, css: { active: $root.distance() === $data }, attr: { id: 'control-distance' + $root.stripDistanceDecimal($data) }"></button>
-            <!-- /ko -->
-        </div>
+    <div>
     </div>
 
     <!-- Feed rate -->
@@ -96,10 +90,6 @@
             <ul class="dropdown-menu" data-bind="foreach: tools">
                 <li><a href="#" data-bind="click: $root.sendSelectToolCommand, text: name(), enable: $root.isOperational() && !$root.isPrinting() && !$root.isPaused() && $root.loginState.isUser()"></a></li>
             </ul>
-        </div>
-        <div class="input-append control-box">
-            <input type="text" class="input-mini text-right" data-bind="value: extrusionAmount, enable: isOperational() && !isPrinting() && loginState.isUser(), attr: {placeholder: settings.printer_defaultExtrusionLength}">
-            <span class="add-on">mm</span>
         </div>
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendExtrudeCommand() }">{{ _('Extrude') }}</button>
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
