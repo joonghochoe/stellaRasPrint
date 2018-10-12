@@ -28,7 +28,8 @@ $(function() {
 
         self.tools = ko.observableArray([]);
 
-        self.feedRate = ko.observable(100);
+        // STELLAMOVE
+        self.feedRate = ko.observable(75);
         self.flowRate = ko.observable(100);
 
         self.feedbackControlLookup = {};

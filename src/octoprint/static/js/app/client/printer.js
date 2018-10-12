@@ -108,6 +108,7 @@
         return this.issuePrintheadCommand("jog", payload, opts);
     };
 
+    // STELLAMOVE
     OctoPrintPrinterClient.prototype.corner = function (position, opts) {
         position = position || 5;
 
@@ -118,6 +119,7 @@
         return this.issuePrintheadCommand("corner", payload, opts);
     };
 
+    // STELLAMOVE
     OctoPrintPrinterClient.prototype.movez = function (direction, opts) {
         direction = direction || 1;
 

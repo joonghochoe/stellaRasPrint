@@ -223,6 +223,7 @@ def printerBedState():
 @api.route("/printer/printhead", methods=["POST"])
 @restricted_access
 def printerPrintheadCommand():
+	# STELLAMOVE
 	valid_commands = {
 		"jog": [],
 		"corner": [],

@@ -220,6 +220,7 @@ class PrinterInterface(object):
 		"""
 		raise NotImplementedError()
 
+	# STELLAMOVE
 	def corner(self, corner, tags=None, *args, **kwargs):
 		"""
 		Corners the specified printer.
@@ -230,6 +231,7 @@ class PrinterInterface(object):
 		"""
 		raise NotImplementedError()
 
+	# STELLAMOVE
 	def movez(self, direction, tags=None, *args, **kwargs):
 		"""
 		Corners the specified printer.

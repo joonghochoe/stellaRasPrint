@@ -347,12 +347,14 @@ class Printer(PrinterInterface, comm.MachineComPrintCallback):
 
 		self.commands(commands, tags=kwargs.get("tags", set()) | {"trigger:printer.jog"})
 
+	# STELLAMOVE
 	def corner(self, corner, *args, **kwargs):
 
 		command = "G828 C%d" % corner
 
 		self.commands(command, tags=kwargs.get("tags", set()) | {"trigger:printer.corner"})
 
+	# STELLAMOVE
 	def movez(self, direction, *args, **kwargs):
 
 		command = "M601 E%s" % direction

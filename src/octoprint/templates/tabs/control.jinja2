@@ -73,7 +73,7 @@
 
     <!-- Feed rate -->
     <div id="control-jog-feedrate" class="jog-panel">
-        <input type="number" style="width: 153px" data-bind="slider: {min: 50, max: 150, step: 1, value: feedRate, tooltip: 'hide'}">
+        <input type="number" style="width: 153px" data-bind="slider: {min: 50, max: 100, step: 1, value: feedRate, tooltip: 'hide'}">
         <button class="btn btn-block" style="width: 169px" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFeedRateCommand() }">{{ _('Feed rate:') }}<span data-bind="text: feedRate() + '%'"></span></button>
     </div>
 </div>
@@ -94,7 +94,7 @@
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
 
         <!-- Flow rate -->
-        <input style="width: 100px" type="number" data-bind="slider: {min: 75, max: 125, step: 1, value: flowRate, tooltip: 'hide'}">
+        <input style="width: 100px" type="number" data-bind="slider: {min: 70, max: 130, step: 1, value: flowRate, tooltip: 'hide'}">
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFlowRateCommand() }">{{ _('Flow rate:') }}<span data-bind="text: flowRate() + '%'"></span></button>
     </div>
 </div>
