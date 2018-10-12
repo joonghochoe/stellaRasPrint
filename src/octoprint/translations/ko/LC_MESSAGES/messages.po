@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: StellaRasPrint\n"
 "Report-Msgid-Bugs-To: i18n@octoprint.org\n"
 "POT-Creation-Date: 2018-07-25 13:37+0200\n"
-"PO-Revision-Date: 2018-10-11 11:03+0900\n"
+"PO-Revision-Date: 2018-10-13 05:31+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Last-Translator: Joongho Choe <joongho.choe@gmail.com>\n"
 "Language-Team: joongho.choe@gmail.com\n"
 "Language: ko\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: src/octoprint/plugins/action_command_prompt/__init__.py:93
 msgid "Action Command Prompt"
@@ -48,6 +48,9 @@ msgid ""
 "OctoPrint will replace <code>{choice}</code> with the index of the selected "
 "choice. E.g. <code>M876 S{choice}</code> will become <code>M123 S1</code>"
 msgstr ""
+"이 옵션을 사용하여 장비에 선택 항목을 알려주는 명령을 정의합니다. OctoPrint는 선"
+"택 항목의 인덱스로 <code>{choice}</code>를 대체 합니다. 예를 들어 <code>M876 "
+"S{choice}</code>는 <code>M123 S1</code>이 될 것입니다"
 
 #: src/octoprint/plugins/announcements/__init__.py:129
 #: src/octoprint/plugins/announcements/templates/announcements.jinja2:4
@@ -78,7 +81,7 @@ msgstr "채널 사용"
 #: src/octoprint/plugins/announcements/static/js/announcements.js:266
 msgid ""
 "You can edit your announcement subscriptions under Settings > Announcements."
-msgstr ""
+msgstr "설정 > 공지 사항에서 알림 구독을 수정할 수 있습니다."
 
 #: src/octoprint/plugins/announcements/static/js/announcements.js:275
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:973
@@ -335,6 +338,9 @@ msgid ""
 "    OctoPrint comes preconfigured to perform the connectivity check every 15 "
 "minutes. You may change the value here.\n"
 msgstr ""
+"\n"
+"    OctoPrint는 15 분마다 연결 검사를 수행하도록 미리 구성되어 있습니다. 여기에"
+"서 값을 변경할 수 있습니다.\n"
 
 #: src/octoprint/plugins/corewizard/templates/corewizard_onlinecheck_wizard.jinja2:18
 msgid ""
@@ -975,7 +981,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:770
 msgid "A restart is needed for the changes to take effect."
-msgstr ""
+msgstr "변경 내용이 적용되려면 다시 시작해야 합니다."
 
 #: src/octoprint/plugins/pluginmanager/static/js/pluginmanager.js:778
 msgid "Restart now"
@@ -1141,7 +1147,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Restart of OctoPrint needed for changes to take effect"
-msgstr ""
+msgstr "변경 사항이 적용되려면 필요한 OctoPrint를 다시 시작하십시오"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Pending install"
@@ -1153,15 +1159,15 @@ msgstr "삭제 대기"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "Disabled due to safe mode"
-msgstr ""
+msgstr "안전 모드로 인해 사용 안 함"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "There are notices available regarding this plugin"
-msgstr ""
+msgstr "이 플러그인에 대한 공지가 있습니다"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:50
 msgid "This plugin is blacklisted"
-msgstr ""
+msgstr "블랙 리스트 플러그인"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:54
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:166
@@ -1232,7 +1238,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:186
 msgid "Is your OctoPrint installation connected to the internet?"
-msgstr ""
+msgstr "OctoPrint 설치가 인터넷에 연결되어 있습니까?"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:191
 msgid "... from URL"
@@ -1301,7 +1307,7 @@ msgstr "저장소 URL"
 msgid ""
 "How long to cache repository data, in minutes. You should normally not have to "
 "change this."
-msgstr ""
+msgstr "저장소 데이터를 캐시할 시간(분)입니다. 일반적으로 변경할 필요가 없습니다."
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:258
 msgid "Repository cache TTL"
@@ -1309,7 +1315,7 @@ msgstr ""
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:269
 msgid "Notices configuration"
-msgstr ""
+msgstr "알림 구성"
 
 #: src/octoprint/plugins/pluginmanager/templates/pluginmanager_settings.jinja2:271
 msgid ""
@@ -1374,6 +1380,8 @@ msgid ""
 "Without this plugin OctoPrint will no longer be able to check if the printer it "
 "is connected to has a known safetyissue and inform you about that fact."
 msgstr ""
+"이 플러그인이 없으면 OctoPrint는 연결된 장비에 알려진 안전 이슈가 있는지 확인하"
+"고 해당 사실에 대해 알려 줄 수 없습니다."
 
 #: src/octoprint/plugins/printer_safety_check/templates/printer_safety_check_sidebar.jinja2:1
 msgid "Warning!"
@@ -1437,7 +1445,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:311
 msgid "There are updates available for the following components:"
-msgstr ""
+msgstr "다음 구성 요소에 사용할 수 있는 업데이트가 있습니다:"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:319
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:565
@@ -1541,22 +1549,24 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:571
 msgid "This action may disrupt any ongoing print jobs."
-msgstr ""
+msgstr "이 작업을 수행하면 진행중인 인쇄 작업이 중단될 수 있습니다."
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:572
 msgid ""
 "Depending on your printer's controller and general setup, restarting OctoPrint "
 "may cause your printer to be reset."
 msgstr ""
+"장비의 컨트롤러와 일반설정에 따라 OctoPrint를 다시 시작하면 장비가 리셋될수 있습"
+"니다."
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:573
 #: src/octoprint/static/js/app/helpers.js:703
 msgid "Are you sure you want to proceed?"
-msgstr ""
+msgstr "계속 하시겠습니까?"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:575
 msgid "Are you sure you want to update now?"
-msgstr ""
+msgstr "지금 업데이트 하시겠습니까?"
 
 #: src/octoprint/plugins/softwareupdate/static/js/softwareupdate.js:577
 #: src/octoprint/static/js/app/helpers.js:708
@@ -1759,7 +1769,7 @@ msgstr ""
 
 #: src/octoprint/plugins/softwareupdate/templates/snippets/plugins/softwareupdate/checkoutFolder.jinja2:5
 msgid "This needs to be set if you select commit based version tracking."
-msgstr ""
+msgstr "이는 커밋 기반 버전 추적을 선택하는 경우 설정해야 합니다."
 
 #: src/octoprint/plugins/softwareupdate/templates/snippets/plugins/softwareupdate/releaseChannel.jinja2:2
 msgid "OctoPrint Release Channel"
@@ -2008,6 +2018,8 @@ msgid ""
 "There was a communication error while talking to your printer. Please consult "
 "the terminal output and octoprint.log for details. Error: %(error)s"
 msgstr ""
+"장비와 통신하는 동안 오류가 발생했습니다. 자세한 내용은 터미널 출력 및 "
+"octoprint.log 를 참조하십시오. 오류: %(error)s"
 
 #: src/octoprint/static/js/app/dataupdater.js:258
 msgid "Error connecting to printer"
@@ -2017,7 +2029,7 @@ msgstr "장비 연결 오류"
 #, python-format
 msgid ""
 "There was an error while trying to connect to your printer. Error: %(error)s"
-msgstr ""
+msgstr "장비에 연결하는 동안 오류가 발생했습니다. 오류: %(error)s"
 
 #: src/octoprint/static/js/app/dataupdater.js:263
 msgid "Error starting a print"
@@ -2038,6 +2050,8 @@ msgid ""
 "There was an unknown error while talking to your printer. Please consult the "
 "terminal output and octoprint.log for details. Error: %(error)s"
 msgstr ""
+"장비와 통신하는 동안 알 수 없는 오류가 발생했습니다. 자세한 내용은 터미널 출력 "
+"및 octoprint.log 를 참조하십시오. 오류: %(error)s"
 
 #: src/octoprint/static/js/app/dataupdater.js:294
 msgid ""
@@ -2046,6 +2060,9 @@ msgid ""
 "investigate why your printer reset itself, since this will interrupt prints and "
 "also file transfers to your printer's SD."
 msgstr ""
+"연결이 활성화되어 있는 동안 장비가 리셋된 것처럼 보입니다. 의도적인 경우에는 이 "
+"메시지를 무시해도 됩니다. 그렇지 않으면 출력과 장비의 SD에 대한 파일 전송을 방해"
+"하기 때문에 장비가 리셋되는 이유를 조사해야 합니다."
 
 #: src/octoprint/static/js/app/dataupdater.js:297
 msgid ""
@@ -2054,6 +2071,10 @@ msgid ""
 "message. Otherwise you should investigate why your printer reset itself, since "
 "this will interrupt prints and also file transfers to your printer's SD."
 msgstr ""
+"연결이 활성화되어 있는 동안 장비가 리셋된 것처럼 보입니다. 이로 인해 진행 중인 "
+"작업이 중단되었습니다. 의도적인 경우에는 이 메시지를 무시해도 됩니다. 그렇지 않"
+"으면 출력과 장비의 SD에 파일 전송을 방해하기 때문에 프린터가 재설정되는 이유를 "
+"조사해야 합니다."
 
 #: src/octoprint/static/js/app/dataupdater.js:305
 msgid "Printer reset detected"
@@ -2180,11 +2201,11 @@ msgstr "동작중"
 
 #: src/octoprint/static/js/app/main.js:178
 msgid "Printing from SD"
-msgstr ""
+msgstr "SD에서 인쇄"
 
 #: src/octoprint/static/js/app/main.js:179
 msgid "Sending file to SD"
-msgstr ""
+msgstr "SD로 파일 보내기"
 
 #: src/octoprint/static/js/app/main.js:180
 msgid "Printing"
@@ -2200,7 +2221,7 @@ msgstr "끊기"
 
 #: src/octoprint/static/js/app/main.js:183
 msgid "Transferring file to SD"
-msgstr ""
+msgstr "SD로 파일 전송"
 
 #: src/octoprint/static/js/app/viewmodels/connection.js:42
 #: src/octoprint/templates/sidebar/connection.jinja2:13
@@ -2223,7 +2244,7 @@ msgstr ""
 
 #: src/octoprint/static/js/app/viewmodels/connection.js:142
 msgid "Are you sure you want to disconnect from the printer?"
-msgstr ""
+msgstr "장비에서 연결을 끊으시겠습니까?"
 
 #: src/octoprint/static/js/app/viewmodels/connection.js:143
 msgid "Stay Connected"
@@ -2244,7 +2265,7 @@ msgstr "압출기"
 
 #: src/octoprint/static/js/app/viewmodels/files.js:49
 msgid "Your available free disk space is critically low."
-msgstr ""
+msgstr "사용 가능한 여유 디스크 공간이 매우 낮습니다."
 
 #: src/octoprint/static/js/app/viewmodels/files.js:51
 msgid "Your available free disk space is starting to run low."
