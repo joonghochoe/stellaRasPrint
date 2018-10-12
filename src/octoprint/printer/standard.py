@@ -447,14 +447,16 @@ class Printer(PrinterInterface, comm.MachineComPrintCallback):
 
 		return factor
 
+	# STELLAMOVE
 	def feed_rate(self, factor, *args, **kwargs):
-		factor = self._convert_rate_value(factor, min=50, max=200)
+		factor = self._convert_rate_value(factor, min=50, max=100)
 		self.commands("M220 S%d" % factor,
 		              tags=kwargs.get("tags", set()) | {"trigger:printer.feed_rate"})
 
-	def flow_rate(self, factor, *args, **kwargs):
-		factor = self._convert_rate_value(factor, min=75, max=125)
-		self.commands("M221 S%d" % factor,
+	# STELLAMOVE
+	def flow_rate(self, tool, factor, *args, **kwargs):
+		factor = self._convert_rate_value(factor, min=70, max=130)
+		self.commands("M222 T%d S%d" % (tool, factor),
 		              tags=kwargs.get("tags", set()) | {"trigger:printer.flow_rate"})
 
 	def select_file(self, path, sd, printAfterSelect=False, user=None, pos=None, *args, **kwargs):

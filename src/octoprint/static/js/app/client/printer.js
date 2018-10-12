@@ -190,10 +190,12 @@
         return this.issueToolCommand("extrude", payload, opts);
     };
 
-    OctoPrintPrinterClient.prototype.setFlowrate = function (factor, opts) {
+    // STELLAMOVE
+    OctoPrintPrinterClient.prototype.setFlowrate = function (tool, factor, opts) {
         factor = factor || 100;
 
         var payload = {
+            tool: tool,
             factor: factor
         };
 

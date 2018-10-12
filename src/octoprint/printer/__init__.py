@@ -309,11 +309,14 @@ class PrinterInterface(object):
 		"""
 		raise NotImplementedError()
 
-	def flow_rate(self, factor, tags=None, *args, **kwargs):
+	# STELLAMOVE
+	def flow_rate(self, tool, factor, tags=None, *args, **kwargs):
 		"""
 		Sets the ``factor`` for the printer's flow rate.
 
 		Arguments:
+		    tool (int): The tool for the tool to send to the firmware. Percentage expressed as either an
+		        int between 0 and 100 or a float between 0 and 1.
 		    factor (int, float): The factor for the flow rate to send to the firmware. Percentage expressed as either an
 		        int between 0 and 100 or a float between 0 and 1.
 		    tags (set of str): An optional set of tags to attach to the command(s) throughout their lifecycle

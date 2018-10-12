@@ -62,12 +62,13 @@ def printerToolCommand():
 	if not printer.is_operational():
 		return make_response("Printer is not operational", 409)
 
+	# STELLAMOVE
 	valid_commands = {
 		"select": ["tool"],
 		"target": ["targets"],
 		"offset": ["offsets"],
 		"extrude": ["amount"],
-		"flowrate": ["factor"]
+		"flowrate": ["tool", "factor"]
 	}
 	command, data, response = get_json_command_from_request(request, valid_commands)
 	if response is not None:
@@ -134,11 +135,15 @@ def printerToolCommand():
 		printer.extrude(amount, tags=tags)
 
 	elif command == "flowrate":
+		# STELLAMOVE
+		tool = data["tool"]
 		factor = data["factor"]
+		if not isinstance(tool, (int, long, float)):
+			return make_response("Not a number for tool: %r" % tool, 400)
 		if not isinstance(factor, (int, long, float)):
 			return make_response("Not a number for flow rate: %r" % factor, 400)
 		try:
-			printer.flow_rate(factor, tags=tags)
+			printer.flow_rate(tool, factor, tags=tags)
 		except ValueError as e:
 			return make_response("Invalid value for flow rate: %s" % str(e), 400)
 

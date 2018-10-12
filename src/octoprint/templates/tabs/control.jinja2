@@ -77,34 +77,34 @@
         <button class="btn btn-block" style="width: 169px" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFeedRateCommand() }">{{ _('Feed rate:') }}<span data-bind="text: feedRate() + '%'"></span></button>
     </div>
 </div>
-<!-- Extrusion control panel -->
-<div id="control-jog-extrusion" class="jog-panel" style="display: none;" data-bind="visible: loginState.isUser">
-    <h1>Tool (E)</h1>
+
+<!-- Extrusion 0 control panel -->
+<div id="control-jog-extrusion-0" class="jog-panel" style="display: none;" data-bind="visible: loginState.isUser">
+    <h1>{{ _('Tool') }} 0</h1>
     <div>
-        <div class="btn-group control-box">
-            <button class="btn dropdown-toggle" data-toggle="dropdown" data-bind="enable: isOperational() && !isPrinting() && !isPaused() && loginState.isUser()">
-                {{ _('Select Tool...') }}
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" data-bind="foreach: tools">
-                <li><a href="#" data-bind="click: $root.sendSelectToolCommand, text: name(), enable: $root.isOperational() && !$root.isPrinting() && !$root.isPaused() && $root.loginState.isUser()"></a></li>
-            </ul>
-        </div>
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendExtrudeCommand() }">{{ _('Extrude') }}</button>
+        <div style="height:40px">
+        </div>
         <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
 
         <!-- Flow rate -->
-        <input style="width: 100px" type="number" data-bind="slider: {min: 70, max: 130, step: 1, value: flowRate, tooltip: 'hide'}">
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFlowRateCommand() }">{{ _('Flow rate:') }}<span data-bind="text: flowRate() + '%'"></span></button>
+        <input style="width: 100px" type="number" data-bind="slider: {min: 70, max: 130, step: 1, value: flowRate_0, tooltip: 'hide'}">
+        <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFlowRateCommand(0) }">{{ _('Flow rate:') }}<span data-bind="text: flowRate_0() + '%'"></span></button>
     </div>
 </div>
-<!-- General control panel -->
-<div id="control-jog-general" class="jog-panel" style="display: none;" data-bind="visible: loginState.isUser">
-    <h1>{{ _('General') }}</h1>
+
+<!-- Extrusion 1 control panel -->
+<div id="control-jog-extrusion-1" class="jog-panel" style="display: none;" data-bind="visible: loginState.isUser">
+    <h1>{{ _('Tool') }} 1</h1>
     <div>
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCustomCommand({type:'command',command:'M18'}) }">{{ _('Motors off') }}</button>
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendCustomCommand({type:'command',command:'M106 S255'}) }">{{ _('Fan on') }}</button>
-        <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendCustomCommand({type:'command',command:'M106 S0'}) }">{{ _('Fan off') }}</button>
+        <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendExtrudeCommand() }">{{ _('Extrude') }}</button>
+        <div style="height:40px">
+        </div>
+        <button class="btn btn-block control-box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendRetractCommand() }">{{ _('Retract') }}</button>
+
+        <!-- Flow rate -->
+        <input style="width: 100px" type="number" data-bind="slider: {min: 70, max: 130, step: 1, value: flowRate_1, tooltip: 'hide'}">
+        <button class="btn btn-block control-box" data-bind="enable: isOperational() && loginState.isUser(), click: function() { $root.sendFlowRateCommand(1) }">{{ _('Flow rate:') }}<span data-bind="text: flowRate_1() + '%'"></span></button>
     </div>
 </div>
 

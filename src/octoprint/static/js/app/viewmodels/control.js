@@ -30,7 +30,8 @@ $(function() {
 
         // STELLAMOVE
         self.feedRate = ko.observable(75);
-        self.flowRate = ko.observable(100);
+        self.flowRate_0 = ko.observable(100);
+        self.flowRate_1 = ko.observable(100);
 
         self.feedbackControlLookup = {};
 
@@ -299,8 +300,13 @@ $(function() {
             self._sendECommand(-1);
         };
 
-        self.sendFlowRateCommand = function () {
-            OctoPrint.printer.setFlowrate(self.flowRate());
+        # STELLAMOVE
+        self.sendFlowRateCommand = function (tool) {
+            if (tool < 1) {
+                OctoPrint.printer.setFlowrate(tool, self.flowRate_0());
+            } else {
+                OctoPrint.printer.setFlowrate(tool, self.flowRate_1());
+            }
         };
 
         self._sendECommand = function (dir) {
