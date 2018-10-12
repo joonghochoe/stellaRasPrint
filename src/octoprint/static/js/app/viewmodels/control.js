@@ -274,6 +274,14 @@ $(function() {
             OctoPrint.printer.jog(data);
         };
 
+        self.sendCornerCommand = function (position) {
+            OctoPrint.printer.corner(position);
+        };
+
+        self.sendMoveZCommand = function (direction) {
+            OctoPrint.printer.movez(direction);
+        };
+
         self.sendHomeCommand = function (axis) {
             OctoPrint.printer.home(axis);
         };
@@ -477,19 +485,19 @@ $(function() {
             switch (event.which) {
                 case 37: // left arrow key
                     // X-
-                    button = $("#control-xdec");
+                    button = $("#control-crb");
                     break;
                 case 38: // up arrow key
                     // Y+
-                    button = $("#control-yinc");
+                    button = $("#control-clb");
                     break;
                 case 39: // right arrow key
                     // X+
-                    button = $("#control-xinc");
+                    button = $("#control-crf");
                     break;
                 case 40: // down arrow key
                     // Y-
-                    button = $("#control-ydec");
+                    button = $("#control-clf");
                     break;
                 case 49: // number 1
                 case 97: // numpad 1

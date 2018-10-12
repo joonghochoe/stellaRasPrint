@@ -225,6 +225,8 @@ def printerBedState():
 def printerPrintheadCommand():
 	valid_commands = {
 		"jog": [],
+		"corner": [],
+		"movez": [],
 		"home": ["axes"],
 		"feedrate": ["factor"]
 	}
@@ -255,6 +257,32 @@ def printerPrintheadCommand():
 
 		# execute the jog commands
 		printer.jog(validated_values, relative=not absolute, speed=speed, tags=tags)
+
+	# STELLAMOVE
+	##~~ corner command
+	if command == "corner":
+		corner = data["corner"]
+		if not isinstance(corner, (int, long, float)):
+			return make_response("Not a number for corner %r" % corner, 400)
+
+		# execute the jog commands
+		try:
+			printer.corner(corner, tags=tags)
+		except ValueError as e:
+			return make_response("Invalid value for corner: %s" % str(e), 400)
+
+	# STELLAMOVE
+	##~~ up/down z command
+	if command == "movez":
+		updown = data["updown"]
+		if not isinstance(updown, (int, long, float)):
+			return make_response("Not a number for z move %r" % updown, 400)
+
+		# execute the up/down z commands
+		try:
+			printer.movez(updown, tags=tags)
+		except ValueError as e:
+			return make_response("Invalid value for z move: %s" % str(e), 400)
 
 	##~~ home command
 	elif command == "home":

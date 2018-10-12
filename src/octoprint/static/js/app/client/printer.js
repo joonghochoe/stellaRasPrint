@@ -108,6 +108,26 @@
         return this.issuePrintheadCommand("jog", payload, opts);
     };
 
+    OctoPrintPrinterClient.prototype.corner = function (position, opts) {
+        position = position || 5;
+
+        var payload = {
+            corner: position
+        };
+
+        return this.issuePrintheadCommand("corner", payload, opts);
+    };
+
+    OctoPrintPrinterClient.prototype.movez = function (direction, opts) {
+        direction = direction || 1;
+
+        var payload = {
+            updown: direction
+        };
+
+        return this.issuePrintheadCommand("movez", payload, opts);
+    };
+
     OctoPrintPrinterClient.prototype.home = function (axes, opts) {
         axes = axes || [];
 

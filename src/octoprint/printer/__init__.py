@@ -220,6 +220,26 @@ class PrinterInterface(object):
 		"""
 		raise NotImplementedError()
 
+	def corner(self, corner, tags=None, *args, **kwargs):
+		"""
+		Corners the specified printer.
+
+		Arguments:
+		    corner (dict): Axes and distances to jog, keys are axes ("x", "y", "z"), values are distances in mm
+		    tags (set of str): An optional set of tags to attach to the command(s) throughout their lifecycle
+		"""
+		raise NotImplementedError()
+
+	def movez(self, direction, tags=None, *args, **kwargs):
+		"""
+		Corners the specified printer.
+
+		Arguments:
+		    direction (dict): Axes and distances to jog, keys are axes ("x", "y", "z"), values are distances in mm
+		    tags (set of str): An optional set of tags to attach to the command(s) throughout their lifecycle
+		"""
+		raise NotImplementedError()
+
 	def home(self, axes, tags=None, *args, **kwargs):
 		"""
 		Homes the specified printer ``axes``.

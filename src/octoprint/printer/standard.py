@@ -347,6 +347,18 @@ class Printer(PrinterInterface, comm.MachineComPrintCallback):
 
 		self.commands(commands, tags=kwargs.get("tags", set()) | {"trigger:printer.jog"})
 
+	def corner(self, corner, *args, **kwargs):
+
+		command = "G828 C%d" % corner
+
+		self.commands(command, tags=kwargs.get("tags", set()) | {"trigger:printer.corner"})
+
+	def movez(self, direction, *args, **kwargs):
+
+		command = "M601 E%s" % direction
+
+		self.commands(command, tags=kwargs.get("tags", set()) | {"trigger:printer.movez"})
+
 	def home(self, axes, *args, **kwargs):
 		if not isinstance(axes, (list, tuple)):
 			if isinstance(axes, (str, unicode)):

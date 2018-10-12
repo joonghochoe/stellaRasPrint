@@ -44,28 +44,27 @@
     <div id="control-jog-xy" class="jog-panel">
         <h1>X/Y</h1>
         <div>
-            <button id="control-yinc" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',1) }"><i class="fa fa-arrow-up"></i></button>
-            <button id="control-xyhome" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendHomeCommand(['x', 'y']) }"><i class="fa fa-home"></i></button>
-            <button id="control-xdec" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',-1) }"><i class="fa fa-arrow-left"></i></button>
+            <button id="control-clb" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCornerCommand(1) }"><i class="fa fa-stop"></i></button>
+            <button id="control-xyhome" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCornerCommand(5) }"><i class="fa fa-home"></i></button>
+            <button id="control-crb" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCornerCommand(2) }"><i class="fa fa-stop"></i></button>
         </div>
         <div style="height:80px">
         </div>
         <div>
-            <button id="control-ydec" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('y',-1) }"><i class="fa fa-arrow-down"></i></button>
-            <button id="control-xinc" class="btn box pull-right" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('x',1) }"><i class="fa fa-arrow-right"></i></button>
+            <button id="control-clf" class="btn box pull-left" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCornerCommand(3) }"><i class="fa fa-stop"></i></button>
+            <button id="control-crf" class="btn box pull-right" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendCornerCommand(4) }"><i class="fa fa-stop"></i></button>
         </div>
     </div>
     <!-- Z jogging control panel -->
     <div id="control-jog-z" class="jog-panel">
         <h1>Z</h1>
         <div>
-            <button id="control-zinc" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('z',1) }"><i class="fa fa-arrow-up"></i></button>
+            <button id="control-zinc" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendMoveZCommand(1) }"><i class="fa fa-arrow-up"></i></button>
+        </div>
+        <div style="height:40px">
         </div>
         <div>
-            <button id="control-zhome" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendHomeCommand(['z']) }"><i class="fa fa-home"></i></button>
-        </div>
-        <div>
-            <button id="control-zdec" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendJogCommand('z',-1) }"><i class="fa fa-arrow-down"></i></button>
+            <button id="control-zdec" class="btn box" data-bind="enable: isOperational() && !isPrinting() && loginState.isUser(), click: function() { $root.sendMoveZCommand(-1) }"><i class="fa fa-arrow-down"></i></button>
         </div>
     </div>
 
