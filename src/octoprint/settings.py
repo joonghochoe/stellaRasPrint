@@ -87,12 +87,13 @@ def settings(init=False, basedir=None, configfile=None):
 default_settings = {
 	"serial": {
 		"port": None,
-		"baudrate": None,
+		# STELLAMOVE
+		"baudrate": 115200,
 		"autoconnect": False,
 		"log": False,
 		"timeout": {
 			"detection": 1,
-            # STELLAMOVE
+			# STELLAMOVE
 			"connection": 120,
 			"communication": 120,
 			"communicationBusy": 3,
@@ -114,6 +115,7 @@ default_settings = {
 		"additionalPorts": [],
 		"additionalBaudrates": [],
 		"longRunningCommands": ["G4", "G28", "G29", "G30", "G32", "M400", "M226", "M600"],
+		# STELLAMOVE
 		"checksumRequiringCommands": ["M110", "c", "g", "h", "i", "l", "q", "t"],
 		"helloCommand": "M110 N0",
 		"disconnectOnErrors": True,
@@ -220,7 +222,7 @@ default_settings = {
 		"watermark": True,
 		"flipH": False,
 		"flipV": False,
-		"rotate90" : False,
+		"rotate90": False,
 		"timelapse": {
 			"type": "off",
 			"options": {},
@@ -229,8 +231,9 @@ default_settings = {
 		},
 		"cleanTmpAfterDays": 7
 	},
+	# STELLAMOVE
 	"gcodeViewer": {
-		"enabled": True,
+		"enabled": False,
 		"mobileSizeThreshold": 2 * 1024 * 1024, # 2MB
 		"sizeThreshold": 20 * 1024 * 1024, # 20MB
 	},
@@ -242,10 +245,12 @@ default_settings = {
 	},
 	"feature": {
 		"temperatureGraph": True,
-		"sdSupport": True,
+		# STELLAMOVE
+		"sdSupport": False,
 		"keyboardControl": True,
 		"pollWatched": False,
-		"modelSizeDetection": True,
+		# STELLAMOVE
+		"modelSizeDetection": False,
 		"printCancelConfirmation": True,
 		"autoUppercaseBlacklist": ["M117", "M118"],
 		"g90InfluencesExtruder": False
@@ -267,8 +272,9 @@ default_settings = {
 	},
 	"temperature": {
 		"profiles": [
-			{"name": "ABS", "extruder" : 210, "bed" : 100 },
-			{"name": "PLA", "extruder" : 180, "bed" : 60 }
+			# STELLAMOVE
+			{"name": "ABS", "extruder": 230, "bed": 60},
+			{"name": "PLA", "extruder": 200, "bed": 40}
 		],
 		"cutoff": 30,
 		"sendAutomatically": False,
@@ -329,8 +335,9 @@ default_settings = {
 		"trustBasicAuthentication": False,
 		"checkBasicAuthenticationPassword": True
 	},
+	# STELLAMOVE
 	"slicing": {
-		"enabled": True,
+		"enabled": False,
 		"defaultSlicer": "cura",
 		"defaultProfiles": None
 	},
