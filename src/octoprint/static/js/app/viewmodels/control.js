@@ -300,7 +300,7 @@ $(function() {
             self._sendECommand(-1);
         };
 
-        # STELLAMOVE
+        // STELLAMOVE
         self.sendFlowRateCommand = function (tool) {
             if (tool < 1) {
                 OctoPrint.printer.setFlowrate(tool, self.flowRate_0());
